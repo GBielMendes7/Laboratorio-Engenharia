@@ -49,6 +49,7 @@ function configFimDeJogo() {
     envioPalpite.disabled = true;
     botaoReinicio = document.createElement('button');
     botaoReinicio.textContent = 'Iniciar novo jogo';
+    botaoReinicio.style.padding = '10px';
     document.body.appendChild(botaoReinicio);
     botaoReinicio.addEventListener('click', reiniciarJogo);
 }
