@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        var ultimoResultado = document.querySelector('.ultimoResultado');
+        function conferir(){
+            let palavra = document.getElementById("palavra").value;
+            let array = palavra.split('');
+            for (let i = 0; i < array.length/2; i++) {
+                if (array[i] !== array[array.length - 1 - i]) {
+                    return document.write("palavra não é Palíndromo");
+                }
+                return document.write("palavra é Palíndromo");
+            }
+        }
+
+    </script>
+
+    <title>Atividades - Palíndromo</title>
+</head>
+<body>
+    <div>
+        <label for="palavra" >Digite uma palavra: </label>
+        <input type="text" id="palavra">
+        <button onClick="conferir()">Clique Aqui</button>
+    </div>
+    <div>
+        <p class="palpites subtitle"></p>
+        <p class="ultimoResultado"></p>
+    </div>
+    
+    
+    
+    
+</body>
+</html>
