@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade</title>
+    <title>Atividade 04</title>
 </head>
 <body>
-    <button id="meuBotao">Try it</button>
+    <form>
+        <label for="lista">Digite aqui sua lista: </label>
+        <input type="text" name="lista" id="lista">
+        <button id="meuBotao">Try it</button>
+    </form>
+    
 <script>
-    document.getElementById("meuBotao").addEventListener("click", function(){
-        let e = document.createElement("P");
-        let t = document.createTextNode("Meu Paragrafo criado com JavaScript");
-        e.appendChild(t);
-        document.body.appendChild(e);
+    let botao = document.getElementById("meuBotao");
+
+    botao.addEventListener("click", function(){
+        let lista = document.getElementById("lista").value;
+        let ol = document.createElement("ol");
+        let li  = document.createElement("li");
+        li.appendChild(lista);
+        ol.appendChild(li);
+        document.body.appendChild(ol);
     })
 </script>    
     
