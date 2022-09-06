@@ -31,7 +31,7 @@
                 </div>
                 <div class="col">
                     <label for="campoKm" class="label-control">kilometragem: </label>
-                    <input type="text" name="campoKm" id="campoKm" class="form-control">
+                    <input type="number" name="campoKm" id="campoKm" class="form-control">
                 </div>
                 <div class="col">
                     <label for="campoValor" class="label-control">Valor Tabela Fipe: </label>
@@ -40,10 +40,12 @@
             </div>
             <div class="row">
                 <div class="col mt-3">
-                    <button type="submit" id="teste" class="btn btn-danger">Pagar</button>
+                    <button type="submit" id="teste" class="btn btn-danger">Calcular</button>
                 </div>
             </div>
         </form>
+        <p id="resultado"></p>
+        <p id="resultado1"></p>
     
     </div>
     <script type="text/javascript" src="script.js"></script>

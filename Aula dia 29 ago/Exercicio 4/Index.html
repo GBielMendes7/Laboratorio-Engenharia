@@ -9,34 +9,12 @@
 <body>
     <form>
         <label for="lista">Digite aqui sua lista: </label>
-        <input type="text" name="lista" id="lista">
+        <input type="text" name="palavra" id="palavra">
         <button id="Botao">Try it</button>
     </form>
-    
-    <script>
-        let lista = new Array();
-        let botao = document.getElementById("Botao");
+    <ol id="Lista"></ol>
 
-        botao.addEventListener("click", function(){
-            lista.push(document.getElementById("lista").value);
-            lista.sort();
-            listar();
-        })
-
-        function listar(){
-            for(i= 0; lista.length; i++){
-                let ol = document.createElement("ol");
-                let li  = document.createElement("li");
-                let t = document.createTextNode(lista[i]);
-                li.appendChild(t);
-                ol.appendChild(li);
-                document.getElementById("minha lista").appendChild(ol);
-                
-
-            }
-        }
-
-    </script>    
+    <script type="text/javascript" src="script.js"></script>   
     
 </body>
 </html>

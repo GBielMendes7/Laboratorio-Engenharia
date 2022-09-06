@@ -1,6 +1,8 @@
 let botao = document.getElementById("teste");
 
-document.getElementById("teste").addEventListener("click", function(){
+document.getElementById("teste").addEventListener("click", function(e){
+    e.preventDefault();
+
     carro.marca = document.getElementById("campoMarca").value;
     carro.modelo = document.getElementById("campoModelo").value;
     carro.ano = document.getElementById("campoAno").value;
@@ -8,19 +10,36 @@ document.getElementById("teste").addEventListener("click", function(){
     carro.km = document.getElementById("campoKm").value;
     carro.valor = document.getElementById("campoValor").value;
 
+    console.log(carro.valorMercado());
+    document.getElementById("resultado").innerHTML = carro.anosUtilizacao();
+    document.getElementById("resultado1").innerHTML = carro.valorMercado();
+
 })
     
 let carro = {
     marca: "",
     modelo: "",
-    ano: "",
+    ano: 1,
     cor: "",
-    km: "",
-    valor: "",
-    acelerar(){
-		console.log('Acelerando...');
+    km: 1,
+    valor: 1,
+    anosUtilizacao: function(){
+        const dataAtual = new Date();
+        const anoAtual = dataAtual.getFullYear();
+        if (this.ano < anoAtual){
+            return anoAtual - this.ano;
+        }
 	},
-	frear(){
-		console.log('Freando');
-	},
+	valorMercado: function(){
+		if(this.km <= 30000){
+            return this.valor + (this.valor * (10 / 100));
+        }
+        else if(this.km > 30000 && this.km <= 50000){
+            return this.valor;
+        }
+        else{
+            return this.valor - (this.valor * (90 / 100));
+        }
+
+	}
 };
