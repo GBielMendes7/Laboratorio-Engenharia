@@ -1,4 +1,4 @@
-
+let botao = document.getElementById("teste");
 
 document.getElementById("teste").addEventListener("click", function(){
     carro.marca = document.getElementById("campoMarca").value;
@@ -7,8 +7,7 @@ document.getElementById("teste").addEventListener("click", function(){
     carro.cor = document.getElementById("campoCor").value;
     carro.km = document.getElementById("campoKm").value;
     carro.valor = document.getElementById("campoValor").value;
-    
-    carro.acelerar();
+
 })
     
 let carro = {
@@ -25,5 +24,3 @@ let carro = {
 		console.log('Freando');
 	},
 };
-
-
