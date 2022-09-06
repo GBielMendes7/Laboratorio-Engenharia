@@ -10,21 +10,33 @@
     <form>
         <label for="lista">Digite aqui sua lista: </label>
         <input type="text" name="lista" id="lista">
-        <button id="meuBotao">Try it</button>
+        <button id="Botao">Try it</button>
     </form>
     
-<script>
-    let botao = document.getElementById("meuBotao");
+    <script>
+        let lista = new Array();
+        let botao = document.getElementById("Botao");
 
-    botao.addEventListener("click", function(){
-        let lista = document.getElementById("lista").value;
-        let ol = document.createElement("ol");
-        let li  = document.createElement("li");
-        li.appendChild(lista);
-        ol.appendChild(li);
-        document.body.appendChild(ol);
-    })
-</script>    
+        botao.addEventListener("click", function(){
+            lista.push(document.getElementById("lista").value);
+            lista.sort();
+            listar();
+        })
+
+        function listar(){
+            for(i= 0; lista.length; i++){
+                let ol = document.createElement("ol");
+                let li  = document.createElement("li");
+                let t = document.createTextNode(lista[i]);
+                li.appendChild(t);
+                ol.appendChild(li);
+                document.getElementById("minha lista").appendChild(ol);
+                
+
+            }
+        }
+
+    </script>    
     
 </body>
 </html>
