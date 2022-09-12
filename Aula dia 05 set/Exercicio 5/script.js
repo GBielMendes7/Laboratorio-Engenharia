@@ -11,8 +11,8 @@ document.getElementById("teste").addEventListener("click", function(e){
     carro.valor = document.getElementById("campoValor").value;
 
     console.log(carro.valorMercado());
-    document.getElementById("resultado").innerHTML = carro.anosUtilizacao();
-    document.getElementById("resultado1").innerHTML = carro.valorMercado();
+    document.getElementById("resultado").innerHTML = carro.anosUtilizacao()+" Anos";
+    document.getElementById("resultado1").innerHTML = "R$"+carro.valorMercado();
 
 })
     
@@ -32,13 +32,16 @@ let carro = {
 	},
 	valorMercado: function(){
 		if(this.km <= 30000){
-            return this.valor + (this.valor * (10 / 100));
+            let rel = this.valor + (this.valor * (10 / 100));
+            return rel;
         }
         else if(this.km > 30000 && this.km <= 50000){
-            return this.valor;
+            let rel = this.valor
+            return rel;
         }
         else{
-            return this.valor - (this.valor * (90 / 100));
+            let rel = this.valor - (this.valor * (90 / 100))
+            return rel
         }
 
 	}

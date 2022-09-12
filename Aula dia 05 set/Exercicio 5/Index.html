@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">LOJA</h1>
+        <h1 class="text-center">Calcular valor do carro</h1>
         <form>
-          <h2 class="p-4">Pagamento</h2>
+          <h2 class="p-4">Formulario.</h2>
             <div class="row">
                 <div class="col">
                     <label for="campoMarca" class="label-control">Marca: </label>
@@ -25,6 +25,8 @@
                     <label for="campoAno" class="label-control">Ano: </label>
                     <input type="number" name="campoAno" id="campoAno" class="form-control">
                 </div>
+            </div>
+            <div class="row">
                 <div class="col">
                     <label for="campoCor" class="label-control">Cor: </label>
                     <input type="text" name="campoCor" id="campoCor" class="form-control">
@@ -37,15 +39,34 @@
                     <label for="campoValor" class="label-control">Valor Tabela Fipe: </label>
                     <input type="number" name="campoValor" id="campoValor" class="form-control">
                 </div>
-            </div>
+            </div>    
+                
             <div class="row">
                 <div class="col mt-3">
                     <button type="submit" id="teste" class="btn btn-danger">Calcular</button>
                 </div>
             </div>
         </form>
-        <p id="resultado"></p>
-        <p id="resultado1"></p>
+
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Seu carro possuí:</h2>
+            </div>
+            <div class="col">
+                <h2 id="resultado"></h2>
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h2>Valor do seu carro:</h2>
+            </div>
+            <div class="col">
+                <h2 id="resultado1"></h2>
+            </div>
+
+        </div>
+
     
     </div>
     <script type="text/javascript" src="script.js"></script>
