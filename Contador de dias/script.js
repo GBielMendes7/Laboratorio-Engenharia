@@ -1,4 +1,4 @@
-import Countdown from '/Nova pasta/countdown.js'
+import Countdown from '/Contador de dias/countdown.js'
 
 const tempoSemeste = new Countdown("06 December 2022 23:00:00 GMT-0300")
 console.log(tempoSemeste.total);
