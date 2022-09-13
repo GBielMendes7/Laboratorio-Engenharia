@@ -14,10 +14,10 @@
     <div id="root">
         <script type="text/babel">
            function tick(){
-                let palavra = "Venha estudar na Fatec"
-                let frase = palavra.slit("");
+                let texto = "Venha estudar na Fatec"
+                let frase = texto.replace(" ").toLowerCase();
                 for (let i = frase.length + 1; i >= 0; i++){
-                    document.white(frase[i])
+                    document.write(frase[i])
                 }
             ReactDOM.render(element, document.getElementById('root'));
            }
