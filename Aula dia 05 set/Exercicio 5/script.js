@@ -32,7 +32,7 @@ let carro = {
 	},
 	valorMercado: function(){
 		if(this.km <= 30000){
-            let rel = this.valor + (this.valor * (10 / 100));
+            let rel = this.valor * 1.1
             return rel;
         }
         else if(this.km > 30000 && this.km <= 50000){
@@ -40,7 +40,7 @@ let carro = {
             return rel;
         }
         else{
-            let rel = this.valor - (this.valor * (90 / 100))
+            let rel = this.valor * 0.9
             return rel
         }
 
