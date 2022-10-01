@@ -1,18 +1,27 @@
-let lista = [];
-    let botao = document.getElementById('Botao');
+let elementos = [];
+let btnAdicionar = document.getElementById("btnAdicionar");
 
-    botao.addEventListener('click', function(e){
-        e.preventDefault();
-        lista.push(document.getElementById('palavra').value);
-        lista.sort();
-        listar();
+btnAdicionar.addEventListener("click", function () {
+
+    let valor = document.getElementById("valor").value;
+    elementos.push(valor.toString());
+
+    let oldOL = document.getElementById("lista");
+    if (oldOL !== null)
+   { document.body.removeChild(oldOL); }
+
+    elementos.sort();
+
+    let elementoOL = document.createElement("OL");
+    elementoOL.setAttribute("id", "lista");
+    elementos.forEach(element => {
+        let elementLI = document.createElement("LI");
+        let elementBR = document.createElement("BR");
+        let textNode = document.createTextNode(element);
+        elementLI.appendChild(textNode);
+        elementoOL.appendChild(textNode);
+        elementoOL.appendChild(elementBR);
     });
 
-    function listar(){
-        for(i=0;i<lista.length;i++){
-            let l = document.createElement("li");
-            let t = document.createTextNode(lista[i]);
-            l.appendChild(t);
-            document.getElementById('Lista').appendChild(l);
-        }
-    }
+    document.body.appendChild(elementoOL);
+});
