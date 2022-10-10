@@ -3,14 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Array</title>    
 </head>
-<body>
-    <div>  
-        <label for="valor">Valor </label>
-        <input type="text" id="valor" name="valor"> </input>
-        <button type="submit" id="btnAdicionar">Adicionar</button>
+<body class="container fs-2">
+    <div class="row text-center">
+        <div class="col p-5 mb-3">
+            <label for="valor" class="form-label form-control-lg">Valor </label>
+            <input type="text" id="valor" name="valor" class="form-label form-control-lg" placeholder="Digite para listar..."> </input>
+            <button type="submit" id="btnAdicionar" class="btn btn-primary btn-lg">Adicionar</button>
+        </div>
     </div>
-    <script type="text/javascript" src="script.js" async></script>
+    <h2 class="text-center p-3">Array Dinâmico</h2>
+
+    <div id="minhaLista" class="rounded-4 border border-primary border border-5" ></div>
+    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

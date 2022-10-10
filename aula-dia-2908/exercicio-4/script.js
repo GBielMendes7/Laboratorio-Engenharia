@@ -8,7 +8,7 @@ btnAdicionar.addEventListener("click", function () {
 
     let oldOL = document.getElementById("lista");
     if (oldOL !== null)
-   { document.body.removeChild(oldOL); }
+   { document.getElementById("minhaLista").removeChild(oldOL); }
 
     elementos.sort();
 
@@ -23,5 +23,5 @@ btnAdicionar.addEventListener("click", function () {
         elementoOL.appendChild(elementBR);
     });
 
-    document.body.appendChild(elementoOL);
+    document.getElementById("minhaLista").appendChild(elementoOL);
 });
